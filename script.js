@@ -82,14 +82,15 @@ window.onload = function () {
                     num *= num2;
                     break;
                 case '/':
-                    num /= num2;
+                    let c = (num /= num2);
+                    num = c.toFixed(5);
                     break;
                 case '%':
                     num = (num / 100 * (num2));
                     break;
             }
             end = true;
-            display.textContent = Number(num).toFixed(10);
+            display.textContent = Number(num);
         }
     }
 }
