@@ -1,0 +1,108 @@
+html {
+    background: radial-gradient(circle, rgba(198, 156, 81, 1) 0%, rgba(96, 69, 171, 1) 0%, rgba(217, 100, 211, 1) 100%);
+    height: fit-content;
+
+}
+
+body {
+    width: 100%;
+    height: 950px;
+    margin: 0;
+    display: flex;
+    justify-content: start;
+    gap: 70px;
+    align-items: center;
+}
+
+.balbulator{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(34, 34, 34);
+}
+
+#screen{
+    font-size: 2.5rem;
+}
+
+.calculator {
+    width: 298px;
+    height: 485px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgb(34, 34, 34);
+    color: white;
+    font-family: Arial;
+    padding: 0;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+.calc-screen {
+    height: 125px;
+    padding: 10px;
+    display: grid;
+    justify-items: end;
+    align-items: end;
+    margin-bottom: 10PX;
+}
+
+.calc-screen p {
+    text-align: right;
+    font-size: 3rem;
+    margin: 0;
+    overflow: hidden;
+}
+
+.buttons {
+    height: 330px;
+    display: grid;
+    grid-template-areas:
+        "ac plus-minus percent divider"
+        "seven eigth nine multipl"
+        "four five six minus"
+        "one two three plus"
+        "zero zero dot equal";
+    grid-gap: 2px;
+    justify-content: center;
+}
+
+.btn {
+    width: 73px;
+    height: 100%;
+    background: rgb(219, 219, 219);
+    color: black;
+    border-radius: 20%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn.zero {
+    grid-area: zero;
+    width: 100%;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.btn:hover {
+    filter: brightness(120%);
+}
+
+.btn:active {
+    filter: brightness(90%);
+}
+
+.btn.bg-grey {
+    background: #dd9d49;
+    color: white;
+}
+
+.btn.bg-orange {
+    background: #dd2b6f;
+    color: black;
+    color: white;
+}
