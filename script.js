@@ -42,8 +42,6 @@ window.onload = function () {
                 display.textContent = num2;
             }
 
-            console.log(num, num2, oper);
-
             return;
         }
 
@@ -59,13 +57,11 @@ window.onload = function () {
         if (content == '±') {
             if (num2 == '') {
                 num *= -1;
-                console.log(num);
                 display.textContent=num;
             }
             else if (num2 != '') {
                 num2 *= -1;
                 display.textContent = num2;
-                console.log(num2);
             }
         }
 
@@ -86,11 +82,12 @@ window.onload = function () {
                     num = c.toFixed(5);
                     break;
                 case '%':
-                    num = (num / 100 * (num2));
+                    let d = (num / 100 * (num2));
+                    num = d.toFixed(3);
                     break;
             }
             end = true;
-            display.textContent = Number(num);
+            display.textContent = num;
         }
     }
 }
